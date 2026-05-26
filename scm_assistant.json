@@ -1,0 +1,707 @@
+{
+  "nodes": [
+    {
+      "id": "recursiveCharacterTextSplitter_0",
+      "position": {
+        "x": -227.692,
+        "y": 128.03200000000004
+      },
+      "type": "customNode",
+      "data": {
+        "id": "recursiveCharacterTextSplitter_0",
+        "label": "Recursive Character Text Splitter",
+        "version": 2,
+        "name": "recursiveCharacterTextSplitter",
+        "type": "RecursiveCharacterTextSplitter",
+        "baseClasses": [
+          "RecursiveCharacterTextSplitter",
+          "TextSplitter",
+          "BaseDocumentTransformer",
+          "Runnable"
+        ],
+        "category": "Text Splitters",
+        "inputParams": [
+          {
+            "label": "Chunk Size",
+            "name": "chunkSize",
+            "type": "number",
+            "default": 1000,
+            "optional": true,
+            "id": "recursiveCharacterTextSplitter_0-input-chunkSize-number"
+          },
+          {
+            "label": "Chunk Overlap",
+            "name": "chunkOverlap",
+            "type": "number",
+            "optional": true,
+            "id": "recursiveCharacterTextSplitter_0-input-chunkOverlap-number"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "chunkSize": 800,
+          "chunkOverlap": 150
+        },
+        "outputAnchors": [
+          {
+            "id": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+            "name": "recursiveCharacterTextSplitter",
+            "label": "RecursiveCharacterTextSplitter",
+            "type": "RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 382,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -227.692,
+        "y": 128.03200000000004
+      },
+      "dragging": false
+    },
+    {
+      "id": "recursiveCharacterTextSplitter_1",
+      "position": {
+        "x": -213.83200000000002,
+        "y": 544.248
+      },
+      "type": "customNode",
+      "data": {
+        "id": "recursiveCharacterTextSplitter_1",
+        "label": "Recursive Character Text Splitter (1)",
+        "version": 2,
+        "name": "recursiveCharacterTextSplitter",
+        "type": "RecursiveCharacterTextSplitter",
+        "baseClasses": [
+          "RecursiveCharacterTextSplitter",
+          "TextSplitter",
+          "BaseDocumentTransformer",
+          "Runnable"
+        ],
+        "category": "Text Splitters",
+        "inputParams": [
+          {
+            "label": "Chunk Size",
+            "name": "chunkSize",
+            "type": "number",
+            "default": 1000,
+            "optional": true,
+            "id": "recursiveCharacterTextSplitter_1-input-chunkSize-number"
+          },
+          {
+            "label": "Chunk Overlap",
+            "name": "chunkOverlap",
+            "type": "number",
+            "optional": true,
+            "id": "recursiveCharacterTextSplitter_1-input-chunkOverlap-number"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "chunkSize": 1200,
+          "chunkOverlap": 200
+        },
+        "outputAnchors": [
+          {
+            "id": "recursiveCharacterTextSplitter_1-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+            "name": "recursiveCharacterTextSplitter",
+            "label": "RecursiveCharacterTextSplitter",
+            "type": "RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 382,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -213.83200000000002,
+        "y": 544.248
+      },
+      "dragging": false
+    },
+    {
+      "id": "textFile_0",
+      "position": {
+        "x": 185.02038976879004,
+        "y": -122.49558878597645
+      },
+      "type": "customNode",
+      "data": {
+        "id": "textFile_0",
+        "label": "Text File",
+        "version": 1,
+        "name": "textFile",
+        "type": "Document",
+        "baseClasses": [
+          "Document"
+        ],
+        "category": "Document Loaders",
+        "description": "Load data from text files",
+        "inputParams": [
+          {
+            "label": "Txt File",
+            "name": "txtFile",
+            "type": "file",
+            "fileType": ".txt",
+            "id": "textFile_0-input-txtFile-file"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Text Splitter",
+            "name": "textSplitter",
+            "type": "TextSplitter",
+            "optional": true,
+            "id": "textFile_0-input-textSplitter-TextSplitter"
+          }
+        ],
+        "inputs": {
+          "textSplitter": "{{recursiveCharacterTextSplitter_0.data.instance}}"
+        },
+        "outputAnchors": [
+          {
+            "id": "textFile_0-output-document-Document|json",
+            "name": "document",
+            "label": "Document",
+            "type": "Document | json"
+          }
+        ],
+        "outputs": {
+          "output": "document"
+        },
+        "selected": false
+      },
+      "width": 300,
+      "height": 365,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 185.02038976879004,
+        "y": -122.49558878597645
+      },
+      "dragging": false
+    },
+    {
+      "id": "pdfFile_0",
+      "position": {
+        "x": 186.75000000000006,
+        "y": 321.788
+      },
+      "type": "customNode",
+      "data": {
+        "id": "pdfFile_0",
+        "label": "Pdf File",
+        "version": 1,
+        "name": "pdfFile",
+        "type": "Document",
+        "baseClasses": [
+          "Document"
+        ],
+        "category": "Document Loaders",
+        "description": "Load data from PDF files",
+        "inputParams": [
+          {
+            "label": "Pdf File",
+            "name": "pdfFile",
+            "type": "file",
+            "fileType": ".pdf",
+            "id": "pdfFile_0-input-pdfFile-file"
+          },
+          {
+            "label": "Usage",
+            "name": "usage",
+            "type": "options",
+            "options": [
+              {
+                "label": "One document per page",
+                "name": "perPage"
+              },
+              {
+                "label": "One document per file",
+                "name": "perFile"
+              }
+            ],
+            "default": "perPage",
+            "id": "pdfFile_0-input-usage-options"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Text Splitter",
+            "name": "textSplitter",
+            "type": "TextSplitter",
+            "optional": true,
+            "id": "pdfFile_0-input-textSplitter-TextSplitter"
+          }
+        ],
+        "inputs": {
+          "usage": "perPage",
+          "textSplitter": "{{recursiveCharacterTextSplitter_1.data.instance}}"
+        },
+        "outputAnchors": [
+          {
+            "id": "pdfFile_0-output-document-Document|json",
+            "name": "document",
+            "label": "Document",
+            "type": "Document | json"
+          }
+        ],
+        "outputs": {
+          "output": "document"
+        },
+        "selected": false
+      },
+      "width": 300,
+      "height": 479,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 186.75000000000006,
+        "y": 321.788
+      },
+      "dragging": false
+    },
+    {
+      "id": "mistralAIEmbeddings_0",
+      "position": {
+        "x": 188.13599999999997,
+        "y": 873.042
+      },
+      "type": "customNode",
+      "data": {
+        "id": "mistralAIEmbeddings_0",
+        "label": "MistralAI Embeddings",
+        "version": 1,
+        "name": "mistralAIEmbeddings",
+        "type": "MistralAIEmbeddings",
+        "baseClasses": [
+          "MistralAIEmbeddings",
+          "Embeddings"
+        ],
+        "category": "Embeddings",
+        "description": "MistralAI API to generate embeddings for a given text",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "credentialNames": [
+              "mistralAIApi"
+            ],
+            "id": "mistralAIEmbeddings_0-input-credential-credential"
+          },
+          {
+            "label": "Model Name",
+            "name": "modelName",
+            "type": "string",
+            "default": "mistral-embed",
+            "id": "mistralAIEmbeddings_0-input-modelName-string"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "modelName": "mistral-embed"
+        },
+        "outputAnchors": [
+          {
+            "id": "mistralAIEmbeddings_0-output-mistralAIEmbeddings-MistralAIEmbeddings|Embeddings",
+            "name": "mistralAIEmbeddings",
+            "label": "MistralAIEmbeddings",
+            "type": "MistralAIEmbeddings | Embeddings"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 379,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 188.13599999999997,
+        "y": 873.042
+      },
+      "dragging": false
+    },
+    {
+      "id": "memoryVectorStore_0",
+      "position": {
+        "x": 724.5346191802099,
+        "y": 575.9523243929239
+      },
+      "type": "customNode",
+      "data": {
+        "id": "memoryVectorStore_0",
+        "label": "In-Memory Vector Store",
+        "version": 1,
+        "name": "memoryVectorStore",
+        "type": "MemoryVectorStore",
+        "baseClasses": [
+          "MemoryVectorStore",
+          "VectorStoreRetriever",
+          "BaseRetriever"
+        ],
+        "category": "Vector Stores",
+        "inputParams": [
+          {
+            "label": "Top K",
+            "name": "topK",
+            "type": "number",
+            "placeholder": "4",
+            "optional": true,
+            "id": "memoryVectorStore_0-input-topK-number"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Document",
+            "name": "document",
+            "type": "Document",
+            "list": true,
+            "optional": true,
+            "id": "memoryVectorStore_0-input-document-Document"
+          },
+          {
+            "label": "Embeddings",
+            "name": "embeddings",
+            "type": "Embeddings",
+            "id": "memoryVectorStore_0-input-embeddings-Embeddings"
+          }
+        ],
+        "inputs": {
+          "document": [
+            "{{pdfFile_0.data.instance}}",
+            "{{textFile_0.data.instance}}"
+          ],
+          "embeddings": "{{mistralAIEmbeddings_0.data.instance}}",
+          "topK": 20
+        },
+        "outputAnchors": [
+          {
+            "id": "memoryVectorStore_0-output-retriever-MemoryVectorStore|VectorStoreRetriever|BaseRetriever",
+            "name": "retriever",
+            "label": "MemoryVectorStore Retriever",
+            "type": "MemoryVectorStore | VectorStoreRetriever | BaseRetriever"
+          },
+          {
+            "id": "memoryVectorStore_0-output-vectorStore-MemoryVectorStore|VectorStore",
+            "name": "vectorStore",
+            "label": "MemoryVectorStore",
+            "type": "MemoryVectorStore | VectorStore"
+          }
+        ],
+        "outputs": {
+          "output": "retriever"
+        },
+        "selected": false
+      },
+      "width": 300,
+      "height": 638,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 724.5346191802099,
+        "y": 575.9523243929239
+      },
+      "dragging": false
+    },
+    {
+      "id": "bufferMemory_0",
+      "position": {
+        "x": 726.7613501392204,
+        "y": 1161.0956230395514
+      },
+      "type": "customNode",
+      "data": {
+        "id": "bufferMemory_0",
+        "label": "Buffer Memory",
+        "version": 2,
+        "name": "bufferMemory",
+        "type": "BufferMemory",
+        "baseClasses": [
+          "BufferMemory",
+          "BaseChatMemory",
+          "BaseMemory"
+        ],
+        "category": "Memory",
+        "inputParams": [
+          {
+            "label": "Session Id",
+            "name": "sessionId",
+            "type": "string",
+            "default": "",
+            "additionalParams": true,
+            "optional": true,
+            "id": "bufferMemory_0-input-sessionId-string"
+          },
+          {
+            "label": "Memory Key",
+            "name": "memoryKey",
+            "type": "string",
+            "default": "chat_history",
+            "additionalParams": true,
+            "id": "bufferMemory_0-input-memoryKey-string"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "sessionId": "",
+          "memoryKey": "chat_history"
+        },
+        "outputAnchors": [
+          {
+            "id": "bufferMemory_0-output-bufferMemory-BufferMemory|BaseChatMemory|BaseMemory",
+            "name": "bufferMemory",
+            "label": "BufferMemory",
+            "type": "BufferMemory | BaseChatMemory | BaseMemory"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 257,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 726.7613501392204,
+        "y": 1161.0956230395514
+      },
+      "dragging": false
+    },
+    {
+      "id": "chatMistralAI_0",
+      "position": {
+        "x": 729.8288120572415,
+        "y": -26.174248747016122
+      },
+      "type": "customNode",
+      "data": {
+        "id": "chatMistralAI_0",
+        "label": "ChatMistralAI",
+        "version": 3,
+        "name": "chatMistralAI",
+        "type": "ChatMistralAI",
+        "baseClasses": [
+          "ChatMistralAI",
+          "BaseChatModel",
+          "BaseLanguageModel",
+          "Runnable"
+        ],
+        "category": "Chat Models",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "credentialNames": [
+              "mistralAIApi"
+            ],
+            "id": "chatMistralAI_0-input-credential-credential"
+          },
+          {
+            "label": "Model Name",
+            "name": "modelName",
+            "type": "string",
+            "default": "open-mistral-7b",
+            "id": "chatMistralAI_0-input-modelName-string"
+          },
+          {
+            "label": "Temperature",
+            "name": "temperature",
+            "type": "number",
+            "step": 0.1,
+            "default": 0.9,
+            "optional": true,
+            "id": "chatMistralAI_0-input-temperature-number"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "modelName": "open-mistral-7b",
+          "temperature": 0.1
+        },
+        "outputAnchors": [
+          {
+            "id": "chatMistralAI_0-output-chatMistralAI-ChatMistralAI|BaseChatModel|BaseLanguageModel|Runnable",
+            "name": "chatMistralAI",
+            "label": "ChatMistralAI",
+            "type": "ChatMistralAI | BaseChatModel | BaseLanguageModel | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 478,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 729.8288120572415,
+        "y": -26.174248747016122
+      },
+      "dragging": false
+    },
+    {
+      "id": "conversationalRetrievalQAChain_0",
+      "position": {
+        "x": 1565.6302422197612,
+        "y": 282.0238378035381
+      },
+      "type": "customNode",
+      "data": {
+        "id": "conversationalRetrievalQAChain_0",
+        "label": "Conversational Retrieval QA Chain",
+        "version": 3,
+        "name": "conversationalRetrievalQAChain",
+        "type": "ConversationalRetrievalQAChain",
+        "baseClasses": [
+          "ConversationalRetrievalQAChain",
+          "BaseChain",
+          "Runnable"
+        ],
+        "category": "Chains",
+        "inputParams": [
+          {
+            "label": "Return Source Documents",
+            "name": "returnSourceDocuments",
+            "type": "boolean",
+            "optional": true,
+            "id": "conversationalRetrievalQAChain_0-input-returnSourceDocuments-boolean"
+          },
+          {
+            "label": "Rephrase Prompt",
+            "name": "rephrasePrompt",
+            "type": "string",
+            "rows": 4,
+            "additionalParams": true,
+            "optional": true,
+            "default": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:",
+            "id": "conversationalRetrievalQAChain_0-input-rephrasePrompt-string"
+          },
+          {
+            "label": "Response Prompt",
+            "name": "responsePrompt",
+            "type": "string",
+            "rows": 4,
+            "additionalParams": true,
+            "optional": true,
+            "id": "conversationalRetrievalQAChain_0-input-responsePrompt-string"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Chat Model",
+            "name": "model",
+            "type": "BaseChatModel",
+            "id": "conversationalRetrievalQAChain_0-input-model-BaseChatModel"
+          },
+          {
+            "label": "Vector Store Retriever",
+            "name": "vectorStoreRetriever",
+            "type": "BaseRetriever",
+            "id": "conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever"
+          },
+          {
+            "label": "Memory",
+            "name": "memory",
+            "type": "BaseMemory",
+            "optional": true,
+            "id": "conversationalRetrievalQAChain_0-input-memory-BaseMemory"
+          }
+        ],
+        "inputs": {
+          "model": "{{chatMistralAI_0.data.instance}}",
+          "vectorStoreRetriever": "{{memoryVectorStore_0.data.instance}}",
+          "memory": "{{bufferMemory_0.data.instance}}",
+          "returnSourceDocuments": true,
+          "rephrasePrompt": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:",
+          "responsePrompt": "You are the SCM Assistant for BQBYTE Technologies. Use ONLY the context below to answer questions about supplier performance and governance policy.\n\nBe precise: cite supplier IDs (SUP-xxx), supplier names, policy section numbers, and exact scores/percentages. When listing suppliers, be exhaustive from the data. For counting questions, count every match. Never say you are unsure if the answer is present in the context.\n\n------------\n{context}\n------------\n\nQuestion: {question}\nAnswer:"
+        },
+        "outputAnchors": [
+          {
+            "id": "conversationalRetrievalQAChain_0-output-conversationalRetrievalQAChain-ConversationalRetrievalQAChain|BaseChain|Runnable",
+            "name": "conversationalRetrievalQAChain",
+            "label": "ConversationalRetrievalQAChain",
+            "type": "ConversationalRetrievalQAChain | BaseChain | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 485,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1565.6302422197612,
+        "y": 282.0238378035381
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "recursiveCharacterTextSplitter_1",
+      "sourceHandle": "recursiveCharacterTextSplitter_1-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+      "target": "pdfFile_0",
+      "targetHandle": "pdfFile_0-input-textSplitter-TextSplitter",
+      "type": "buttonedge",
+      "id": "edge-splitter1-pdf"
+    },
+    {
+      "source": "pdfFile_0",
+      "sourceHandle": "pdfFile_0-output-document-Document|json",
+      "target": "memoryVectorStore_0",
+      "targetHandle": "memoryVectorStore_0-input-document-Document",
+      "type": "buttonedge",
+      "id": "edge-pdf-vector"
+    },
+    {
+      "source": "mistralAIEmbeddings_0",
+      "sourceHandle": "mistralAIEmbeddings_0-output-mistralAIEmbeddings-MistralAIEmbeddings|Embeddings",
+      "target": "memoryVectorStore_0",
+      "targetHandle": "memoryVectorStore_0-input-embeddings-Embeddings",
+      "type": "buttonedge",
+      "id": "edge-embed-vector"
+    },
+    {
+      "source": "chatMistralAI_0",
+      "sourceHandle": "chatMistralAI_0-output-chatMistralAI-ChatMistralAI|BaseChatModel|BaseLanguageModel|Runnable",
+      "target": "conversationalRetrievalQAChain_0",
+      "targetHandle": "conversationalRetrievalQAChain_0-input-model-BaseChatModel",
+      "type": "buttonedge",
+      "id": "edge-chat-chain"
+    },
+    {
+      "source": "memoryVectorStore_0",
+      "sourceHandle": "memoryVectorStore_0-output-retriever-MemoryVectorStore|VectorStoreRetriever|BaseRetriever",
+      "target": "conversationalRetrievalQAChain_0",
+      "targetHandle": "conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever",
+      "type": "buttonedge",
+      "id": "edge-vector-chain"
+    },
+    {
+      "source": "bufferMemory_0",
+      "sourceHandle": "bufferMemory_0-output-bufferMemory-BufferMemory|BaseChatMemory|BaseMemory",
+      "target": "conversationalRetrievalQAChain_0",
+      "targetHandle": "conversationalRetrievalQAChain_0-input-memory-BaseMemory",
+      "type": "buttonedge",
+      "id": "edge-memory-chain"
+    },
+    {
+      "source": "textFile_0",
+      "sourceHandle": "textFile_0-output-document-Document|json",
+      "target": "memoryVectorStore_0",
+      "targetHandle": "memoryVectorStore_0-input-document-Document",
+      "type": "buttonedge",
+      "id": "textFile_0-textFile_0-output-document-Document|json-memoryVectorStore_0-memoryVectorStore_0-input-document-Document"
+    },
+    {
+      "source": "recursiveCharacterTextSplitter_0",
+      "sourceHandle": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+      "target": "textFile_0",
+      "targetHandle": "textFile_0-input-textSplitter-TextSplitter",
+      "type": "buttonedge",
+      "id": "recursiveCharacterTextSplitter_0-recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-textFile_0-textFile_0-input-textSplitter-TextSplitter"
+    }
+  ]
+}
