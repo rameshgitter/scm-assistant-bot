@@ -1,0 +1,27 @@
+# Environment variables - NEVER commit API keys
+.env
+.env.local
+.env.production
+*.env
+
+# API Keys
+secrets.json
+credentials.json
+apikeys.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vscode/
+.idea/
